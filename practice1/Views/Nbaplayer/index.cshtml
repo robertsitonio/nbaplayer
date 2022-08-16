@@ -1,0 +1,24 @@
+﻿@model practice1.Models.Nbaplayer
+@{
+
+
+    ViewBag.Title = "index";
+}
+
+<h2>index</h2>
+
+<table class="table table-hover">
+    <tr>
+        <td>id</td>
+        <td>first name</td>
+        <td>last name</td>
+        <td>team</td>
+    </tr>
+    <tr>
+        <td>@Model.id</td>
+        <td>@Model.fname</td>
+        <td>@Model.lname</td>
+        <td>@Model.team</td>
+    </tr>
+</table>
+
