@@ -1,4 +1,5 @@
-﻿@model practice1.Models.Nbaplayer
+﻿@using practice1.Models;
+@model IEnumerable<Nbaplayer>
 @{
 
 
@@ -14,11 +15,17 @@
         <td>last name</td>
         <td>team</td>
     </tr>
-    <tr>
-        <td>@Model.id</td>
-        <td>@Model.fname</td>
-        <td>@Model.lname</td>
-        <td>@Model.team</td>
-    </tr>
+    @foreach (Nbaplayer p in Model)
+    {
+        <tr>
+            <td>@p.id</td>
+            <td>@p.fname</td>
+            <td>@p.lname</td>
+            <td>@p.team</td>
+        </tr>
+
+
+    }
+
 </table>
 
